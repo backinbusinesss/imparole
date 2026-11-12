@@ -338,6 +338,7 @@ button { font: inherit; color: inherit; }
 .finder__back, .finder__restart { margin-top: 18px; background: none; border: 0; padding: 6px 0; font-weight: 700; color: var(--violet); cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
 .finder__restart { margin: 0; }
 .finder__result { animation: fade .45s var(--ease); }
+.finder__card [tabindex="-1"]:focus { outline: none; }
 .finder__area { display: inline-block; font-weight: 700; font-size: .9rem; background: #E4F7F1; color: #137A5F; padding: 6px 12px; border-radius: 999px; margin-bottom: 14px; }
 .finder__result h3 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; }
 .finder__result > p { color: var(--ink-2); }
@@ -385,11 +386,11 @@ body.no-scroll { overflow: hidden; }
 .map__city { fill: rgba(75,168,240,.14); stroke: rgba(75,168,240,.5); stroke-width: 1.5; stroke-dasharray: 4 6; }
 .map__citylabel { font: 800 22px var(--f-display); fill: rgba(255,255,255,.35); }
 .map__river { fill: none; stroke: var(--sky); stroke-width: 5; stroke-linecap: round; opacity: .65; }
-.map__riverlabel { font: 700 11px var(--f-body); fill: #9FD0F7; text-anchor: end; }
+.map__riverlabel { font: 700 13px var(--f-body); fill: #9FD0F7; }
 .map__road { fill: none; stroke: rgba(255,255,255,.18); stroke-width: 2; stroke-dasharray: 2 8; stroke-linecap: round; }
 .pin text { font: 800 15px var(--f-display); fill: var(--white); text-anchor: middle; }
 .pin__halo { fill: rgba(255,255,255,.12); transform-box: fill-box; transform-origin: center; transition: transform .35s var(--ease), fill .3s; }
-.pin.is-on .pin__halo { transform: scale(1.7); fill: rgba(255,201,60,.35); }
+.pin.is-on .pin__halo { transform: scale(1.5); fill: rgba(255,255,255,.06); stroke: var(--sun); stroke-width: 3; }
 .place { transition: transform .3s var(--ease), box-shadow .3s; }
 .place.is-on { transform: translateY(-4px); box-shadow: 0 0 0 3px var(--sun); }
 
