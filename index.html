@@ -10,11 +10,17 @@
   <meta property="og:description" content="Valutazioni, logopedia, psicomotricità, potenziamento cognitivo e metodo Feuerstein. Dal 2004 accanto a bambini, famiglie e scuole.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
+  <meta property="og:url" content="https://backinbusinesss.github.io/imparole/">
+  <meta property="og:image" content="https://backinbusinesss.github.io/imparole/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
@@ -55,11 +61,12 @@
         <span class="sr">Apri il menu</span><span class="burger" aria-hidden="true"></span>
       </button>
       <nav id="menu" class="nav__menu" aria-label="Principale">
+        <a href="#orientati">Da dove partire</a>
         <a href="#aiutiamo">Chi aiutiamo</a>
         <a href="#servizi">Servizi</a>
         <a href="#metodo">Metodo</a>
         <a href="#sedi">Sedi</a>
-        <a href="#corsi">Corsi</a>
+        <a href="#domande">Domande</a>
         <a class="btn btn--sun btn--sm" href="#inizia">Prenota l'accoglienza</a>
       </nav>
     </div>
@@ -100,6 +107,51 @@
           <div><dt>4 città</dt><dd>Cernusco sul Naviglio, Milano, Vimodrone, Seveso</dd></div>
           <div><dt>L. 170/2010</dt><dd>centro autorizzato a prima certificazione e rinnovo DSA validi per la scuola</dd></div>
         </dl>
+      </div>
+    </section>
+
+    <!-- PERCORSO GUIDATO -->
+    <section class="sec finder" id="orientati" aria-labelledby="finder-title">
+      <div class="wrap finder__grid">
+        <div class="finder__intro">
+          <h2 id="finder-title">Non sai da dove partire?</h2>
+          <p>Rispondi a due domande. Ti diciamo con quale area e quale valutazione si comincia di solito, e chi incontrerai.</p>
+          <p class="finder__note">È solo un orientamento, non una diagnosi. Il passo successivo è sempre un incontro con noi.</p>
+        </div>
+
+        <div class="finder__card" data-step="1">
+          <div class="finder__progress" aria-hidden="true"><span></span></div>
+
+          <fieldset class="finder__q" data-q="age">
+            <legend>Per chi cerchi aiuto?</legend>
+            <div class="choices">
+              <button type="button" data-v="small">Un bambino fino a 6 anni</button>
+              <button type="button" data-v="school">Un bambino o ragazzo che va a scuola</button>
+              <button type="button" data-v="adult">Un adulto</button>
+              <button type="button" data-v="senior">Una persona anziana</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="finder__q" data-q="need" hidden>
+            <legend>Cosa noti di più?</legend>
+            <div class="choices" id="need-choices"></div>
+            <button type="button" class="finder__back">Torna indietro</button>
+          </fieldset>
+
+          <div class="finder__result" hidden aria-live="polite">
+            <p class="finder__area" id="r-area"></p>
+            <h3 id="r-title"></h3>
+            <p id="r-text"></p>
+            <dl class="finder__meta">
+              <div><dt>Primo passo</dt><dd id="r-first"></dd></div>
+              <div><dt>Chi incontrerai</dt><dd id="r-who"></dd></div>
+            </dl>
+            <div class="finder__actions">
+              <a class="btn btn--sun" href="https://www.imparole.it/accoglienza-online-gratuita/">Prenota l'incontro gratuito</a>
+              <button type="button" class="finder__restart">Ricomincia</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -160,24 +212,24 @@
             <h3>Valutazioni</h3>
             <p>Per capire come funziona il bambino, quali sono le sue risorse e dove ha bisogno di aiuto. Rilasciamo certificazioni DSA valide ai fini scolastici.</p>
             <ul class="pills">
-              <li><a href="https://www.imparole.it/valutazione-neuropsicologica/">Neuropsicologica</a></li>
-              <li><a href="https://www.imparole.it/valutazione-logopedica/">Logopedica</a></li>
-              <li><a href="https://www.imparole.it/valutazione-neuro-psicomotoria/">Neuro-psicomotoria</a></li>
-              <li><a href="https://www.imparole.it/valutazione-dinamiche-lpad/">Dinamica LPAD</a></li>
+              <li><button type="button" data-svc="v-neuro">Neuropsicologica</button></li>
+              <li><button type="button" data-svc="v-logo">Logopedica</button></li>
+              <li><button type="button" data-svc="v-psico">Neuro-psicomotoria</button></li>
+              <li><button type="button" data-svc="v-lpad">Dinamica LPAD</button></li>
             </ul>
           </article>
 
           <div class="svc__list">
             <h3>Trattamenti e riabilitazione</h3>
             <dl>
-              <div><dt><a href="https://www.imparole.it/logopedia/">Logopedia</a></dt><dd>Linguaggio, voce, balbuzie, deglutizione, disprassia verbale, ipoacusia. Anche a domicilio.</dd></div>
-              <div><dt><a href="https://www.imparole.it/psicomotricita/">Neuro e psicomotricità</a></dt><dd>Per disturbi motori, cognitivi ed emotivo-comportamentali.</dd></div>
-              <div><dt><a href="https://www.imparole.it/potenziamento-cognitivo/">Potenziamento cognitivo</a></dt><dd>Strumenti del metodo Feuerstein per imparare a imparare.</dd></div>
-              <div><dt><a href="https://www.imparole.it/training-dsa/">Training DSA</a></dt><dd>Lettura, scrittura, calcolo e strategie di studio.</dd></div>
-              <div><dt><a href="https://www.imparole.it/potenziamento-abilita-sociali/">Abilità sociali</a></dt><dd>Gruppi per stare con gli altri, comunicare, collaborare.</dd></div>
-              <div><dt><a href="https://www.imparole.it/psicoterapia-e-counselling/">Psicoterapia e counselling</a></dt><dd>Per bambini, ragazzi, adulti e genitori.</dd></div>
-              <div><dt><a href="https://www.imparole.it/trattamento-psicoeducativo/">Trattamento psicoeducativo</a></dt><dd>Percorsi strutturati per l'autismo e le disabilità.</dd></div>
-              <div><dt><a href="https://www.imparole.it/trattamenti-intensivi/">Trattamenti intensivi</a></dt><dd>Più ore in pochi giorni, anche per famiglie che arrivano da lontano.</dd></div>
+              <div><dt><button type="button" data-svc="logopedia">Logopedia</button></dt><dd>Linguaggio, voce, balbuzie, deglutizione, disprassia verbale, ipoacusia. Anche a domicilio.</dd></div>
+              <div><dt><button type="button" data-svc="psicomotricita">Neuro e psicomotricità</button></dt><dd>Per disturbi motori, cognitivi ed emotivo-comportamentali.</dd></div>
+              <div><dt><button type="button" data-svc="cognitivo">Potenziamento cognitivo</button></dt><dd>Strumenti del metodo Feuerstein per imparare a imparare.</dd></div>
+              <div><dt><button type="button" data-svc="dsa">Training DSA</button></dt><dd>Lettura, scrittura, calcolo e strategie di studio.</dd></div>
+              <div><dt><button type="button" data-svc="sociali">Abilità sociali</button></dt><dd>Gruppi per stare con gli altri, comunicare, collaborare.</dd></div>
+              <div><dt><button type="button" data-svc="psicoterapia">Psicoterapia e counselling</button></dt><dd>Per bambini, ragazzi, adulti e genitori.</dd></div>
+              <div><dt><button type="button" data-svc="psicoeducativo">Trattamento psicoeducativo</button></dt><dd>Percorsi strutturati per l'autismo e le disabilità.</dd></div>
+              <div><dt><button type="button" data-svc="intensivi">Trattamenti intensivi</button></dt><dd>Più ore in pochi giorni, anche per famiglie che arrivano da lontano.</dd></div>
             </dl>
           </div>
         </div>
@@ -290,28 +342,50 @@
           <h2>Le nostre sedi</h2>
           <p>Quattro città, lo stesso metodo. Per informazioni e appuntamenti c'è un unico numero.</p>
         </div>
+        <div class="sedi">
+        <figure class="map" aria-label="Mappa illustrata delle sedi a nord-est di Milano">
+          <svg viewBox="0 0 480 400" role="img">
+            <title>Le sedi Imparole: Seveso, Milano, Vimodrone, Cernusco sul Naviglio</title>
+            <defs>
+              <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" class="map__dot"/></pattern>
+            </defs>
+            <rect width="480" height="400" rx="28" class="map__bg"/>
+            <rect width="480" height="400" rx="28" fill="url(#dots)"/>
+            <circle cx="205" cy="330" r="74" class="map__city"/>
+            <text x="150" y="388" class="map__citylabel">Milano</text>
+            <path d="M232 318 C 270 300, 300 268, 330 262 S 380 250, 400 246 S 450 236, 480 230" class="map__river"/>
+            <text x="418" y="226" class="map__riverlabel">Naviglio Martesana</text>
+            <path d="M126 80 C 150 160, 180 230, 200 300" class="map__road"/>
+            <g class="pin" data-place="seveso" transform="translate(126 80)"><circle r="20" class="pin__halo"/><circle r="10" fill="var(--coral)"/><text y="-28">Seveso</text></g>
+            <g class="pin" data-place="milano" transform="translate(250 306)"><circle r="20" class="pin__halo"/><circle r="10" fill="var(--sky)"/><text y="-28">Milano</text></g>
+            <g class="pin" data-place="milano" transform="translate(272 290)"><circle r="8" fill="var(--sky)"/></g>
+            <g class="pin" data-place="vimodrone" transform="translate(330 262)"><circle r="20" class="pin__halo"/><circle r="10" fill="var(--mint)"/><text y="34">Vimodrone</text></g>
+            <g class="pin" data-place="cernusco" transform="translate(398 246)"><circle r="20" class="pin__halo"/><circle r="12" fill="var(--violet)"/><text y="-28">Cernusco</text></g>
+          </svg>
+        </figure>
         <ul class="places">
-          <li class="place place--main">
+          <li class="place place--main" data-place="cernusco">
             <h3>Cernusco sul Naviglio <small>MI</small></h3>
             <p>Via B. Luini, 3<br>Via L. Pirandello, 3<br>20063</p>
             <a href="https://www.google.com/maps/search/?api=1&query=Via+Luini+3+Cernusco+sul+Naviglio">Apri in Maps</a>
           </li>
-          <li class="place">
+          <li class="place" data-place="milano">
             <h3>Milano</h3>
             <p>Via Ampère, 9 · 20125<br>Via Maniago, 8 · 20134</p>
             <a href="https://www.google.com/maps/search/?api=1&query=Via+Ampere+9+Milano">Apri in Maps</a>
           </li>
-          <li class="place">
+          <li class="place" data-place="vimodrone">
             <h3>Vimodrone <small>MI</small></h3>
             <p>Via San Remigio, 1<br>20055</p>
             <a href="https://www.google.com/maps/search/?api=1&query=Via+San+Remigio+1+Vimodrone">Apri in Maps</a>
           </li>
-          <li class="place">
+          <li class="place" data-place="seveso">
             <h3>Seveso <small>MB</small></h3>
             <p>Via Zeuner, 5<br>20822</p>
             <a href="https://www.google.com/maps/search/?api=1&query=Via+Zeuner+5+Seveso">Apri in Maps</a>
           </li>
         </ul>
+        </div>
       </div>
     </section>
 
@@ -329,6 +403,42 @@
           <a href="https://www.imparole.it/progetti-scuole/" class="course" style="--c:var(--sky)"><b>Scuole</b><span>Progetti di screening e prevenzione in classe.</span></a>
         </div>
         <p class="courses__more"><a href="https://www.imparole.it/corsi-e-webinar/">Tutti i corsi e i webinar</a> · <a href="https://www.imparole.it/videolezioni/">Videolezioni</a> · <a href="https://www.imparole.it/sede-di-tirocinio-e-tesi/">Tirocinio e tesi</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec sec--soft" id="domande">
+      <div class="wrap faq">
+        <div class="faq__head">
+          <h2>Domande frequenti</h2>
+          <p>Non trovi la risposta? Chiama il <a href="tel:+390292592030">02 925 920 30</a>, dal lunedì al sabato.</p>
+        </div>
+        <div class="faq__list">
+          <details>
+            <summary>L'incontro di accoglienza costa qualcosa?</summary>
+            <p>No, è gratuito e si fa online. Un pedagogista, uno psicologo, un logopedista o un terapista della neuro e psicomotricità ti ascolta, ti aiuta a definire la domanda e ti orienta tra i servizi del centro.</p>
+          </details>
+          <details>
+            <summary>La certificazione DSA che rilasciate vale per la scuola?</summary>
+            <p>Sì. Imparole è un centro autorizzato alla prima certificazione diagnostica e al rinnovo, validi ai fini scolastici secondo la legge 170/2010.</p>
+          </details>
+          <details>
+            <summary>Lavorate anche con la scuola?</summary>
+            <p>È parte del nostro metodo. Con il consenso della famiglia condividiamo i risultati con gli insegnanti, facciamo osservazioni psicoeducative in classe e proponiamo corsi e progetti per le scuole.</p>
+          </details>
+          <details>
+            <summary>Seguite anche adulti e anziani?</summary>
+            <p>Sì: logopedia per afasia, disartria, disfagia, disfonia e balbuzie, sostegno psicologico e percorsi per la terza età. Per alcune di queste situazioni la logopedia è possibile anche a domicilio.</p>
+          </details>
+          <details>
+            <summary>Veniamo da fuori Lombardia. Si può fare?</summary>
+            <p>Sì, con i trattamenti intensivi: più ore di lavoro concentrate in pochi giorni. Abbiamo anche strutture convenzionate per il pernottamento vicino alla sede.</p>
+          </details>
+          <details>
+            <summary>Quale metodo usate?</summary>
+            <p>Il nostro approccio si chiama SECEM e nasce dal metodo Feuerstein: crediamo che le capacità di apprendimento si possano modificare. Lo integriamo con altri metodi riconosciuti, come DIR Floortime®, TEACCH, Prompt© ed EMDR, scelti in base alla persona.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -369,6 +479,31 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <!-- Pannello servizio -->
+  <div class="drawer" id="drawer" hidden>
+    <div class="drawer__scrim" data-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="d-title" tabindex="-1">
+      <button type="button" class="drawer__close" data-close><span class="sr">Chiudi</span><span aria-hidden="true">×</span></button>
+      <p class="drawer__kind" id="d-kind"></p>
+      <h2 id="d-title"></h2>
+      <p class="drawer__lead" id="d-lead"></p>
+      <h3>Quando è utile</h3>
+      <ul id="d-for"></ul>
+      <h3>Come funziona</h3>
+      <p id="d-how"></p>
+      <div class="drawer__actions">
+        <a class="btn btn--sun" href="https://www.imparole.it/accoglienza-online-gratuita/">Parliamone all'incontro gratuito</a>
+        <a class="drawer__more" id="d-more" href="#">Scheda completa su imparole.it</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Barra contatti mobile -->
+  <div class="dock" id="dock" aria-label="Contatti rapidi">
+    <a class="btn btn--sun" href="https://www.imparole.it/accoglienza-online-gratuita/">Prenota gratis</a>
+    <a class="btn btn--ink" href="tel:+390292592030">Chiama</a>
+  </div>
+
+  <script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>
