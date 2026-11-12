@@ -15,7 +15,7 @@
   --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
 
-  --s-1: clamp(2.6rem, 6.4vw, 5.6rem);
+  --s-1: clamp(2.5rem, 5.2vw, 4.7rem);
   --s-2: clamp(2rem, 4.2vw, 3.4rem);
   --s-3: clamp(1.3rem, 2vw, 1.6rem);
   --s-body: 1.0625rem;
@@ -91,9 +91,9 @@ p { margin: 0 0 1em; }
 /* Hero */
 .hero { padding: clamp(40px, 7vw, 96px) 0 0; position: relative; }
 .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 60% at 85% 30%, rgba(91,63,217,.12), transparent 70%); pointer-events: none; }
-.hero__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; position: relative; }
+.hero__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; position: relative; }
 .hero__kicker { font-weight: 700; color: var(--violet); margin-bottom: 18px; }
-.hero__title { font-size: var(--s-1); line-height: .98; letter-spacing: -0.035em; max-width: 12ch; }
+.hero__title { font-size: var(--s-1); line-height: .98; letter-spacing: -0.035em; max-width: 15ch; text-wrap: balance; }
 .hero__lead { font-size: 1.15rem; color: var(--ink-2); max-width: 54ch; margin: 28px 0 32px; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; }
 
@@ -286,7 +286,7 @@ p { margin: 0 0 1em; }
   .nav__menu a:not(.btn)::after { display: none; }
   .nav__menu .btn { margin-top: 18px; }
   .hero__grid, .tri, .story, .sec__head { grid-template-columns: 1fr; }
-  .hero__title { max-width: 14ch; }
+  .hero__title { max-width: 16ch; }
   .facts { grid-template-columns: 1fr; }
   .facts > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
   .svc__list dl > div { grid-template-columns: 1fr; gap: 4px; }
